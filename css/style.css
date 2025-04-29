@@ -1,0 +1,336 @@
+/*==================================
+* Author        : "László Árvai"
+*==================================== */
+
+/*==================================
+font-family: 'Fraunces';
+*==================================== */
+
+/*======= TABLE OF CONTENTS =========
+1.  General css, variables
+2.  Body elements & footer
+3.  Nav-bar
+4.  Comparison table 
+5.  Knife edge flexbox
+6.  Sharpening section
+7.  Contact me
+8. Media queries
+=================================== */
+
+/* Root and universal selectors */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --text: hsl(228, 12%, 48%);
+  --pale: #eee1d3;
+  --red: #bf3f36;
+}
+
+* {
+  margin-left: auto;
+  margin-right: auto;
+  scroll-behavior: smooth;
+  font-family: Fraunces;
+  line-height: 1.5em;
+}
+
+/* Body elements and footer styles */
+
+body {
+  background-color: var(--pale);
+}
+
+h3 {
+  margin-top: 50px;
+  display: inline-flex;
+}
+
+footer {
+  border-top: solid black;
+  color: var(--fontColor);
+  font-style: italic;
+  font-size: 16px;
+  padding: 30px;
+}
+
+.div-container {
+  margin: 0 20px 0 20px;
+}
+
+.text {
+  margin-top: 10rem;
+}
+
+.kitchen-knife {
+  float: right;
+  margin-left: 15px;
+  width: 400px;
+}
+
+.text,
+.sharpening,
+.knife-types,
+.edges,
+.damascus,
+.contact {
+  max-width: 90rem;
+}
+
+.damascus {
+  margin-bottom: 15rem;
+}
+
+/* Nav-bar starts */
+
+header {
+  background-color: var(--white);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+span {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.home-page {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  font-size: 19px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem;
+}
+
+.nav-links a:hover {
+  background-color: var(--pale);
+  color: var(--red);
+  transition: 0.25s ease-in background-color, 0.25s ease-in opacity,
+    0.25s ease-out transform;
+}
+
+/* Comparison table starts */
+
+table {
+  width: 90%;
+}
+
+td {
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+tr,
+th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table th {
+  text-align: left;
+}
+
+table h3 img {
+  padding: 0px 15px;
+}
+
+.table-header {
+  margin: 2rem;
+  margin-left: 5%;
+}
+
+.true {
+  color: hsl(104, 82%, 24%);
+  text-shadow: rgb(204, 214, 64) 1px 0 5px;
+}
+
+.false {
+  color: hsl(354, 100%, 50%);
+  text-shadow: rgb(178, 169, 69) 1px 0 5px;
+}
+
+.comparison-table {
+  width: 85%;
+  margin-bottom: 2rem;
+}
+
+/* Knife-edge section starts */
+
+.knife-types {
+  padding: 10px;
+  background-color: #e9d8c6;
+}
+
+.knife-types h1,
+h2 {
+  text-align: center;
+}
+
+.knife-types p {
+  text-align: center;
+  font-size: 19px;
+}
+
+.knife-types img {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-item {
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--white);
+  border: solid 1px var(--text);
+  border-radius: 10px;
+}
+
+/* Sharpening and videos */
+
+.sharpening-video {
+  float: right;
+  margin-left: 15px;
+}
+
+.damascus-video {
+  float: left;
+  margin-right: 15px;
+}
+
+.sharpening-link {
+  text-decoration: none;
+  color: var(--red);
+  font-style: italic;
+}
+
+.damascus-link {
+  text-decoration: none;
+  color: var(--red);
+  font-style: italic;
+}
+
+/* Contact section */
+
+.contact-container {
+  display: inline-flex;
+  width: 35%;
+}
+
+.contact-me {
+  display: inline-flex;
+}
+
+textarea {
+  display: flex;
+}
+
+.submit-button {
+  box-shadow: inset 0px 1px 0px 0px #a6827e;
+  background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+  background-color: #7d5d3b;
+  border-radius: 3px;
+  border: 1px solid #54381e;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #4d3534;
+}
+.submit-button:hover {
+  background: linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+  background-color: #634b30;
+}
+.submit-button:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Media Query part */
+
+/* Small devices */
+@media only screen and (max-width: 576px) {
+  header span {
+    font-size: 1.2rem;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-flow: column;
+    font-size: 14px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .kitchen-knife {
+    width: 40%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .materials,
+  .damascus,
+  .sharpening {
+    height: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header span {
+    font-size: 1.2rem;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-flow: column;
+    font-size: 14px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .kitchen-knife {
+    width: 40%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .materials,
+  .damascus,
+  .sharpening {
+    height: 100%;
+  }
+}
